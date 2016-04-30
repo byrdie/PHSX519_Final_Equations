@@ -130,12 +130,12 @@
 		& W = \int \rho(\vect{x}) \Phi(\vect{x})\; d^3x = \frac{1}{2} \int \vect{E} \cdot \vect{D} \; d^3x \tag*{Energy to bring charges from $\infty$ (4.83,89)} \\	
 		& \Delta W = - \frac{1}{2} \int_{V_1} \vect{P} \cdot \vect{E}_0 \; d^3 x \tag*{Dielectric placed in $\vect{E}_0$ (4.93)} \\
 		& W = q \Phi(0) - \vect{p} \cdot \vect{E}(0) - \frac{1}{6} \sum_i \sum_j Q_{ij} \pder{E_j}{x_i}(0) + ... \tag*{Work multipole expsn. (4.24)} \\
-		&\ve{N} = \ve{p} \times \ve{E} \tag*{Torque on electric dipole (G. 4.4)} \\
+		&\ve{\tau} = \ve{p} \times \ve{E} \tag*{Torque on electric dipole (G. 4.4)} \\
 		& \ve{F} = (\ve{P \cdot \nabla}) \ve{E} \tag*{Force on electric dipole (G. 4.5)} \\
 		& \Phi = -E_0 \left( r - \frac{a^3}{r^2} \right)	\tag*{Electric potential of conducting sphere in $\vect{E} = E_0 \zhat$ (2.14)} \\
 		& E_r=\frac{2 p \cos \theta}{4 \pi \eo r^3}, \quad E_\theta=\frac{p \sin \theta}{4 \pi \eo r^3} \tag*{Electric dipole at origin in $\zhat$ (4.12)} \\
 		& \vect{E}(\vect{x}) = \frac{3 \vect{n}(\vect{p} \cdot \vect{n}) - \vect{p}}{4 \pi \eo |\vect{x} - \vect{x}_0|^3} \tag*{$\vect{E}$-field due to dipole $\vect{p}$ (4.13)} \\
-		& \vect{N} = \vect{m} \times \vect{B} \tag*{Torque on magnetic dipole moment (5.1)} \\
+		& \vect{\tau} = \vect{m} \times \vect{B} \tag*{Torque on magnetic dipole moment (5.1)} \\
 		& \nabla \cdot \vect{J} = 0 \tag*{Condition of magnetostatics (5.3)} \\
 		& d \vect{B} = k I \frac{d \vect{l} \times \vect{x}}{|\vect{x}|^3} \tag*{Biot-Savart Law (5.4)} \\
 		& \oint_C \vect{B} \cdot d \vect{l} = \mu_0 I \tag*{Amp\`ere's law (5.25)}\\
@@ -168,7 +168,7 @@
 	\setlength{\belowdisplayshortskip}{0pt}
 	\begin{align*} 
 		& \vect{M} = \frac{3}{\mu_0} \left( \frac{\mu - \mu_0}{\mu + 2 \mu_0} \right) \vect{B}_0 \tag*{Permeable sphere in uniform magnetic field $\ve{B}_0$ (5.115)} \\
-		& F = \int_S \vect{B \cdot n} \; da \tag*{Magnetic flux (5.133)} \\
+		& F = \int_S \vect{B \cdot n} \; da = \oint \ve{A} \cdot d \ve{\ell} \tag*{Magnetic flux (5.133)} \\
 		& \mathscr{E} = \oint_C \vect{E}' \cdot d \vect{l} \tag*{Electromotive force (5.134)} \\
 		& \mathscr{E} = -k \tder{F}{t} \tag*{Faraday's Law (5.135)} \\
 		& W = \frac{1}{2} \int \vect{J \cdot A} \; d^3 x  \tag*{Energy to ramp current from zero (4.83)::(5.149)} \\
@@ -197,6 +197,9 @@
 		& \dpder{V}{t} = \frac{1}{\mathcal{LC}} \dpder{V}{z} = c^2 \dpder{V}{z} \tag*{Wave formulation of telegrapher's equations (L. 23)} \\
 		& V(z,t) = f(t-z/c) + g(t+z/c) \tag*{Voltage solutions to telegrapher's equations (L. 25)} \\
 		& I(z,t) = \frac{1}{Z} \lrb{f(t-z/c) - g(t+z/c)} \tag*{Current solutions to telegrapher's equations (L. 30)} \\
+		& Z = c \mathcal{L} = \sqrt{\mathcal{L}/\mathcal{C}} \tag*{Impedance definition (L. 31)} \\
+		& V(\ell,t) = R I(\ell,t) \Rightarrow g(t+\ell/c) = \frac{R-Z}{R+Z} f(t-\ell/c) \tag*{Resistive BC (L. 37,39)}\\
+		& V(z,t) = |\widetilde{A}_0| \cos\lrb{\omega(t \mp z/c) -\delta} \tag*{Sinusoidal solutions to telegrapher's equation (L. 53)} \\
 		& (a + x)^n = a^n + n a^{n-1} x + \frac{n (n-1)}{2!} a^{n-2} x^2 + ... =  \tag*{Binomial Expansion} \\
 		& f(x) \approx f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 + ...  \tag*{Taylor Series} \\
  		&\begin{pmatrix}
