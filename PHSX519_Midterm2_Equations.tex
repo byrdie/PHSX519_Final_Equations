@@ -107,8 +107,8 @@
 	& \small \hspace{-10pt} \textbf{General Equations of Electrostatics} \small \\
 		& \ve{E} = -\ve{\nabla} \Phi - \pder{\ve{A}}{t} \tag*{Electic field in terms of potentials (6.9)} \\
 		& \Phi(\vc{x}) = \K \int \frac{\rho (\vc{x}')}{|\vc{x} - \vc{x}'|} d^3 x' \tag*{Scalar potential in terms of charge density (1.17)} \\
-		& \nabla^2 \Phi = -\rho/\eo	\tag*{Electrostatic Poisson Equation (1.28)} \\
-		& V_i = \sum_{j=1}^{n} p_{ij} q_j,  \qquad Q_i = \sum_{j=1}^{n} C_{ij} V_j  \tag*{Capactiance matrix (1.61)} \\
+		& \nabla^2 \Phi = -\rho/\eo	\tag*{Electrostatic Poisson Eequation (1.28)} \\
+		& V_i = \sum_{j=1}^{n} p_{ij} q_j,  \qquad Q_i = \sum_{j=1}^{n} C_{ij} V_j  \tag*{Capactiance matrices (1.61)} \\
 		& q' = -\frac{a}{r} q, \quad r' = \frac{a^2}{r}		\tag*{Magnitude and position of image charge on sphere (2.4)} \\
 		& q = \int \rho(\vect{x}') \; d^3x'	\tag*{Electric Monopole (4.4)} \\
 		& \vect{p} = \int \vect{x}' \rho(\vect{x}') \; d^3x'	\tag*{Electric dipole (4.8)} \\
@@ -128,7 +128,7 @@
 		\end{cases}	\tag*{Electric JC's (evaluate at boundary) (4.40)} \\		
 		& W = \int \rho(\vect{x}) \Phi(\vect{x})\; d^3x = \frac{1}{2} \int \vect{E} \cdot \vect{D} \; d^3x \tag*{Energy to bring charges from $\infty$ (4.83,89)} \\
 		& W = \frac{1}{2} \sum_{i=1}^{n} Q_i V_i = \frac{1}{2} \sum_{i=1}^n \sum_{j=1}^{n} C_{ij} V_i V_j	\tag*{Potential energy of capacitor system (1.62)} \\	
-		& W = q \Phi(0) - \vect{p} \cdot \vect{E}(0) - \frac{1}{6} \sum_i \sum_j Q_{ij} \pder{E_j}{x_i}(0) + ... \tag*{Work multipole expsn. (4.24)} \\
+		& W = q \Phi(0) - \vect{p} \cdot \vect{E}(0) - \frac{1}{6} \sum_i \sum_j Q_{ij} \pder{E_j}{x_i}(0) + ... \tag*{Work multipole expansion (4.24)} \\
 	& \small \hspace{-10pt} \textbf{Specific Cases in Electrostatics} \small \\
 		&\begin{cases}
 			\Phi_{\text{in}} = - \left( \frac{3}{\epsilon/\eo + 2} \right) E_0 r \cos \theta \\ 
@@ -166,9 +166,9 @@
 	\setlength{\abovedisplayshortskip}{0pt}
 	\setlength{\belowdisplayshortskip}{0pt}
 	\begin{align*} 
-		& \mathcal{L} = \frac{1}{I^2} \int_\mathcal{C} \ve{J(x) \cdot A(x)} \; d^3 x \tag*{Neumann's formula for self-inductance (5.154)} \\
+		& \mathcal{L} = \frac{1}{I^2} \int_\mathcal{C} \ve{J(x) \cdot A(x)} \; d^3 x = \frac{1}{I^2} \int \frac{\ve{B \cdot B}}{\mu} \; d^3 x \tag*{Formulae for inductance (5.154, 5.157)} \\
 		& W = \frac{1}{2} \int \vect{J \cdot A} \; d^3 x  = \frac{1}{2} \int \vect{H \cdot B} \; d^3 x \tag*{Energy in magnetic field (5.149,5.148)} \\
-		& W = \frac{1}{2} \sum_{i=1}^N \mathcal{L}_i I_i^2 + \sum_{i=1}^N \sum_{j>i}^N M_{ij} I_i I_j \tag*{Inductive energy (5.152)} \\
+		& W = \frac{1}{2} \sum_{i=1}^N \mathcal{L}_i I_i^2 + \sum_{i=1}^N \sum_{j>i}^N M_{ij} I_i I_j \tag*{Potential energy in inductor system(5.152)} \\
 	& \small \hspace{-10pt} \textbf{Specific Cases of Magnetostatics} \small \\
 		&\ve{A}_{\text{dip}} = \frac{\mu_0}{4 \pi} \frac{m \sin \theta}{r^2} \Rightarrow \ve{B}_{\text{dip}} = \frac{\mu_0 m}{4 \pi r^3}(2 \cos \theta \rhat + \sin \theta \thetahat) \tag*{Field of dipole (G 5.87,88)} \\
 		& \ve{B}(z) = \frac{\mu_0 I}{2} \lrb{ \frac{a^2}{(a^2 + z^2)^{3/2}} }\zhat \tag*{On-axis magnetic field of current loop (G. 5.41)} \\
