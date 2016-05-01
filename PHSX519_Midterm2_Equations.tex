@@ -101,107 +101,109 @@
 	\setlength{\abovedisplayskip}{-25pt}
 	\setlength{\belowdisplayskip}{0pt}
 	\setlength{\abovedisplayshortskip}{0pt}
+	\setlength{\belowdisplayshortskip}{0pt}
 	\begin{align*}
-		& \ve{\nabla \cdot D} = \rho, \quad \ve{\nabla \cdot B} = 0, \quad \ve{\nabla \times H} = \ve{J}+\pder{\ve{D}}{t},\quad \ve{\nabla \times E} = - \pder{\ve{B}}{t} \tag*{Maxwell's Equations (6.6)}\\
-		& \vect{E}(\vect{x}) = \frac{1}{4 \pi \eo} \int \rho(\vect{x}') \frac{\vect{x} - \vect{x}'}{|\vect{x} - \vect{x}'|^3} d^3x' \tag*{Coulomb's Law (1.5)} \\
-		& \delta(f(x)) = \sum_{i} \frac{1}{\left|\tder{f}{x}(x_i)\right|}\delta(x - x_i)	\tag*{Delta function Rule 5 } \\
-		& \vc{E} = -\vc{\nabla} \Phi	\tag*{Electric field in terms of scalar potential (1.16)} \\
+		& \ve{\nabla \cdot D} = \rho, \quad \ve{\nabla \cdot B} = 0, \quad \ve{\nabla \times H} = \ve{J}+\pder{\ve{D}}{t},\quad \ve{\nabla \times E} = - \pder{\ve{B}}{t} \tag*{Maxwell's Eqns. (6.6)}\\
+	& \small \hspace{-10pt} \textbf{General Equations of Electrostatics} \small \\
+		& \ve{E} = -\ve{\nabla} \Phi - \pder{\ve{A}}{t} \tag*{Electic field in terms of potentials (6.9)} \\
 		& \Phi(\vc{x}) = \K \int \frac{\rho (\vc{x}')}{|\vc{x} - \vc{x}'|} d^3 x' \tag*{Scalar potential in terms of charge density (1.17)} \\
-		& \nabla^2 \Phi = -\rho/\eo	\tag*{Poisson Equation (1.28)} \\
-		& q = \int \rho(\vect{x}') \; d^3x'	\tag*{Monopole (4.4)} \\
-		& \vect{p} = \int \vect{x}' \rho(\vect{x}') \; d^3x'	\tag*{Dipole (4.8)} \\
-		& Q_{ij} = \int (3 x_i' x_j'- r' \delta_{ij})\rho(\vect{x}') d^3x' = 3 M_{ij} - \text{Tr}(\vect{M} \delta_{ij})		\tag*{Quadrupole (4.9)} \\
-		& M_{ij} = \int x_i' x_j' \rho(x') \; d^3 x \tag*{Dana definition} \\
-		&\Phi(\vect{x}) = \K \left[ \frac{q}{r} + \frac{ \vect{p} \cdot \vect{x}}{r^3} + \frac{1}{2} \sum_{i,j} Q_{ij} \frac{x_i x_j}{r^5} + ... \right] \tag*{Multipole Expansion (4.10)} \\
+		& \nabla^2 \Phi = -\rho/\eo	\tag*{Electrostatic Poisson Equation (1.28)} \\
+		& V_i = \sum_{j=1}^{n} p_{ij} q_j,  \qquad Q_i = \sum_{j=1}^{n} C_{ij} V_j  \tag*{Capactiance matrix (1.61)} \\
+		& q' = -\frac{a}{r} q, \quad r' = \frac{a^2}{r}		\tag*{Magnitude and position of image charge on sphere (2.4)} \\
+		& q = \int \rho(\vect{x}') \; d^3x'	\tag*{Electric Monopole (4.4)} \\
+		& \vect{p} = \int \vect{x}' \rho(\vect{x}') \; d^3x'	\tag*{Electric dipole (4.8)} \\
+		& Q_{ij} = \int (3 x_i' x_j'- r' \delta_{ij})\rho(\vect{x}') d^3x' = 3 M_{ij} - \text{Tr}(\vect{M} \delta_{ij})		\tag*{Electric Quadrupole (4.9)} \\
+		& M_{ij} = \int x_i' x_j' \rho(x') \; d^3 x \tag*{Dana definition of $\ve{M}$ matrix} \\
+		&\Phi(\vect{x}) = \K \left[ \frac{q}{r} + \frac{ \vect{p} \cdot \vect{x}}{r^3} + \frac{1}{2} \sum_{i,j} Q_{ij} \frac{x_i x_j}{r^5} + ... \right] \tag*{Electric multipole Expansion (4.10)} \\
+		& \vect{E}(\vect{x}) = \frac{3 \vect{n}(\vect{p} \cdot \vect{n}) - \vect{p}}{4 \pi \eo |\vect{x} - \vect{x}_0|^3} \tag*{$\vect{E}$-field due to dipole $\vect{p}$ (4.13)} \\
+		& \ve{\tau} = \ve{p} \times \ve{E}, \quad \ve{F} = (\ve{p \cdot \nabla}) \ve{E} \tag*{Torque, force on electric dipole (G. 4.4, 4.5)} \\
 		& \vect{D} = \eo \vect{E} + \vect{P} \tag*{Electric displacement(4.34)} \\
-		& \vect{P} = \eo \chi_e \vect{E} \tag*{Induced polarization (4.36)} \\
-		& \ve{P} = (\epsilon - \eo) \ve{E} \tag*{Better expression for polarization} \\
-		& \vect{D} = \epsilon \vect{E} \tag*{Electric displacement (4.37)} \\
-		& \epsilon = \eo (1 + \chi_e) \tag*{Electric permittivity (4.38)} \\
+		& \vect{D} = \epsilon \vect{E} \tag*{Electric displacement (linear materials) (4.37)} \\
+		& \vect{P} = \eo \chi_e \vect{E} = (\epsilon - \eo) \ve{E} \tag*{Induced polarization (linear materials) (4.36)} \\
+		& \epsilon = \eo (1 + \chi_e) \tag*{Electric permittivity (linear materials) (4.38)} \\
 		& \sigma_b = \ve{P} \cdot \nhat, \quad \rho_b = - \ve{\nabla \cdot P} \tag*{Electric bound charge density (G. 4.11)} \\
 		& \begin{cases}
 			(\vect{D}_2 - \vect{D}_1) \cdot \vect{n}_{21} = \sigma \\
-			(\vect{E}_2 - \vect{E}_1) \times \vect{n}_{21} = 0 \\
-		\end{cases}	\tag*{Boundary conditions (4.40)} \\
+			(\vect{E}_2 - \vect{E}_1) \times \vect{n}_{21} = 0 \Rightarrow \Phi_1 = \Phi_2 \\
+		\end{cases}	\tag*{Electric JC's (evaluate at boundary) (4.40)} \\		
+		& W = \int \rho(\vect{x}) \Phi(\vect{x})\; d^3x = \frac{1}{2} \int \vect{E} \cdot \vect{D} \; d^3x \tag*{Energy to bring charges from $\infty$ (4.83,89)} \\
+		& W = \frac{1}{2} \sum_{i=1}^{n} Q_i V_i = \frac{1}{2} \sum_{i=1}^n \sum_{j=1}^{n} C_{ij} V_i V_j	\tag*{Potential energy of capacitor system (1.62)} \\	
+		& W = q \Phi(0) - \vect{p} \cdot \vect{E}(0) - \frac{1}{6} \sum_i \sum_j Q_{ij} \pder{E_j}{x_i}(0) + ... \tag*{Work multipole expsn. (4.24)} \\
+	& \small \hspace{-10pt} \textbf{Specific Cases in Electrostatics} \small \\
 		&\begin{cases}
 			\Phi_{\text{in}} = - \left( \frac{3}{\epsilon/\eo + 2} \right) E_0 r \cos \theta \\ 
 			\Phi_{\text{out}} = - E_0 r \cos \theta + \left( \frac{\epsilon/\eo - 1}{\epsilon/\eo + 2} \right) E_0 \frac{a^3}{r^2} \cos \theta 
 		\end{cases} \tag*{Dielectric sphere in $\vect{E} = E_0 \zhat$ (4.54)} \\
-		& W = \int \rho(\vect{x}) \Phi(\vect{x})\; d^3x = \frac{1}{2} \int \vect{E} \cdot \vect{D} \; d^3x \tag*{Energy to bring charges from $\infty$ (4.83,89)} \\	
-		& \Delta W = - \frac{1}{2} \int_{V_1} \vect{P} \cdot \vect{E}_0 \; d^3 x \tag*{Dielectric placed in $\vect{E}_0$ (4.93)} \\
-		& W = q \Phi(0) - \vect{p} \cdot \vect{E}(0) - \frac{1}{6} \sum_i \sum_j Q_{ij} \pder{E_j}{x_i}(0) + ... \tag*{Work multipole expsn. (4.24)} \\
-		&\ve{\tau} = \ve{p} \times \ve{E} \tag*{Torque on electric dipole (G. 4.4)} \\
-		& \ve{F} = (\ve{P \cdot \nabla}) \ve{E} \tag*{Force on electric dipole (G. 4.5)} \\
 		& \Phi = -E_0 \left( r - \frac{a^3}{r^2} \right)	\tag*{Electric potential of conducting sphere in $\vect{E} = E_0 \zhat$ (2.14)} \\
-		& E_r=\frac{2 p \cos \theta}{4 \pi \eo r^3}, \quad E_\theta=\frac{p \sin \theta}{4 \pi \eo r^3} \tag*{Electric dipole at origin in $\zhat$ (4.12)} \\
-		& \vect{E}(\vect{x}) = \frac{3 \vect{n}(\vect{p} \cdot \vect{n}) - \vect{p}}{4 \pi \eo |\vect{x} - \vect{x}_0|^3} \tag*{$\vect{E}$-field due to dipole $\vect{p}$ (4.13)} \\
-		& \vect{\tau} = \vect{m} \times \vect{B} \tag*{Torque on magnetic dipole moment (5.1)} \\
+		& \ve{E} = \frac{\sigma}{\eo} \nhat \tag*{$\ve{E}$ of parallel-plate capacitor ($\nhat$ points from pos. to neg.) (G. Ex. 2.6)} \\
+		& \ve{E} = \frac{p}{4 \pi \eo r^3}\lrp{2 \cos \theta \rhat + \sin \theta \thetahat} \tag*{Electic dipole at origin pointing in $\zhat$ (4.12)} \\	
+	& \small \hspace{-10pt} \textbf{General Equations of Magnetostatics} \small \\
 		& \nabla \cdot \vect{J} = 0 \tag*{Condition of magnetostatics (5.3)} \\
-		& d \vect{B} = k I \frac{d \vect{l} \times \vect{x}}{|\vect{x}|^3} \tag*{Biot-Savart Law (5.4)} \\
-		& \oint_C \vect{B} \cdot d \vect{l} = \mu_0 I \tag*{Amp\`ere's law (5.25)}\\
-		& \vect{B}(\vect{x}) = \nabla \times \vect{A}(\vect{x}) \tag*{Magnetic vector potential (5.27)} \\
-		& \vect{A}(\vect{x}) = \frac{\mu_0}{4 \pi} \int \frac{\vect{J}(\vect{x}')}{|\vect{x}-\vect{x}'|} d^3 x' \tag*{Magnetic vector potential of current distribution (5.32)} \\
-		& \vect{m} = \frac{1}{2} \int \vect{x}' \times \vect{J}(\vect{x}') \; d^3 x \tag*{Magnetic moment definition (5.54)} \\
-		& \vect{m} = \frac{I}{2} \oint \vect{x} \times d \vect{l} \tag*{Magnetic moment of closed circuit (J. pg. 186)} \\
-		& |\vect{m}| = I \times (\text{Area}) \tag*{Magnetic moment of plane loop (5.57)} \\
-		& \vect{A}(\vect{x}) = \frac{\mu_0}{4 \pi} \frac{\vect{m} \times \vect{x}}{|\vect{x}|^3} \tag*{Dipole vector potential (5.55)} \\
-		& \vect{B}(\vect{x}) = \frac{\mu_0}{4 \pi} \left[ \frac{3 \vect{n}(\vect{n} \cdot \vect{m}) - \vect{m}}{|\vect{x}|^3} \right]\tag*{Dipole induction (5.56)}\\
-		& \vect{F} = \vect{\nabla(m \cdot B)} \tag*{Force on dipole (5.69)} \\
-		& \vect{H} = \frac{1}{\mu_0} \vect{B - M} \tag*{Magnetic field (5.81)} \\
-		& \ve{M} = (\mu / \mu_0 - 1) \ve{H} \tag*{Magnetization in linear media (G. 6.29)} \\
-		& \vect{B} = \mu \vect{H} \tag*{Linear condition (5.84)} \\
+		& \nabla^2 \vect{A} = -\mu_0 \vect{J}_M \tag*{Poisson equation in terms of magnetic vector potential (5.101)} \\
+		& \ve{B}(\ve{r}) = \frac{\mu_0 I}{4 \pi} \int \frac{d\ve{l}' \ve{\times} (\ve{x} - \ve{x}')}{|\ve{x} - \ve{x}'|^3} \tag*{Biot-Savart law (G. 5.34)} \\
+		& \vect{B}(\vect{x}) = \nabla \times \vect{A}(\vect{x}), \quad \vect{A}(\vect{x}) = \frac{\mu_0}{4 \pi} \int \frac{\vect{J}(\vect{x}')}{|\vect{x}-\vect{x}'|} d^3 x' \tag*{Magnetic vector potential (5.27,5.32)} \\
+		& \vect{m} = \frac{1}{2} \int \vect{x}' \times \vect{J}(\vect{x}') \; d^3 x'	\tag*{Magnetic dipole (5.54)} \\
+		& \vect{m} = IA \nhat \tag*{Magnetic moment of plane loop (5.57)} \\
+		& \ve{m} = \int \ve{M} \; d^3 x \tag*{Total magnetic moment (J. pg. 197)} \\
+		& \Phi_M(\vect{x}) = \frac{\vect{m \cdot x}}{4 \pi r^3}, \quad \vect{A}(\vect{x}) = \frac{\mu_0}{4 \pi} \frac{\vect{m} \times \vect{x}}{|\vect{x}|^3} \tag*{Magnetic potentials of a dipole (5.55)} \\
+		& \vect{B}(\vect{x}) = \frac{\mu_0}{4 \pi} \left[ \frac{3 \vect{n}(\vect{n} \cdot \vect{m}) - \vect{m}}{|\vect{x}|^3} \right]\tag*{Magnetic field of dipole (5.56)}\\
+		& \ve{\tau} = \ve{m \times B}, \quad \vect{F} = \vect{\nabla(m \cdot B)} \tag*{Torque and force on magnetic dipole (5.1, 5.69)} \\
+		& \vect{H} = -\vect{\nabla} \Phi_M \tag*{Magnetic scalar potential (valid if $\ve{J}_f = 0$) (5.93)} \\
+		& \vect{H} = \frac{1}{\mu_0} \vect{B - M} \tag*{Definition of $\ve{H}$ (5.81)} \\
+		& \vect{B} = \mu \vect{H} \tag*{Property of linear permeable materials (5.84)} \\
 		&\begin{cases}
 			(\vect{B}_2 - \vect{B}_1) \cdot \vect{n} = 0 \\
-			\vect{n} \times (\vect{H}_2 - \vect{H}_1) = \vect{K}_f \\ 
-		\end{cases} \tag*{Interface BC (5.86)} \\
-		& \vect{H} = -\vect{\nabla} \Phi_M \tag*{Magnetic scalar potential (5.93)} \\
+			\vect{n} \times (\vect{H}_2 - \vect{H}_1) = \vect{K}_f, \; \ve{K}_f = 0 \Rightarrow \Phi_1 = \Phi_2 \\
+		\end{cases} \tag*{Magnetic JC's (eval. at boundary) (5.86)} \\
 		& \vect{J}_M = \vect{\nabla \times M}, \quad \vect{K}_b = \vect{M \times n}  \tag*{Bound current density (G. 6.13,14)} \\
 		& \rho_M = - \vect{\nabla \cdot M}, \quad \sigma_M = \vect{n \cdot M} \tag*{Effective magnetic charge density (5.96,99)} \\
-		& \Phi_M(\vect{x}) = \frac{\vect{m \cdot x}}{4 \pi r^3} \tag*{Magnetic scalar potential of dipole (J. pg. 196)} \\
-		& \ve{m} = \int \ve{M} \; d^3 x \tag*{Total magnetic moment (J. pg. 197)} \\
-		& \nabla^2 \vect{A} = -\mu_0 \vect{J}_M \tag*{Poisson equation in terms of magnetic vector potential (5.101)} \\
-		& \Phi_M(r,\theta) = \frac{1}{3} M_0 a^2 \frac{r_<}{r_>^2} \cos \theta \tag*{Sphere with $\ve{M} = M_0 \zhat$ [$(r_<,r_>)$, $(r,a)$] (5.104)} \\
+		& F = \int_S \vect{B \cdot n} \; da = \oint \ve{A} \cdot d \ve{l} \tag*{Magnetic flux (5.133)} \\
+		& \mathscr{E} = -\tder{F}{t} = \oint \ve{E} \cdot d\ve{l} = -\int \pder{\ve{B}}{t} \tag*{EMF due to Faraday's Law (5.135)} \\
+		& M_{ij} = \frac{1}{I_j} F_{ij} \tag*{Mutual inductance (5.156)} \\
 	\end{align*}
 	\setlength{\abovedisplayskip}{-25pt}
 	\setlength{\belowdisplayskip}{0pt}
 	\setlength{\abovedisplayshortskip}{0pt}
 	\setlength{\belowdisplayshortskip}{0pt}
 	\begin{align*} 
-		& \vect{M} = \frac{3}{\mu_0} \left( \frac{\mu - \mu_0}{\mu + 2 \mu_0} \right) \vect{B}_0 \tag*{Permeable sphere in uniform magnetic field $\ve{B}_0$ (5.115)} \\
-		& F = \int_S \vect{B \cdot n} \; da = \oint \ve{A} \cdot d \ve{\ell} \tag*{Magnetic flux (5.133)} \\
-		& \mathscr{E} = \oint_C \vect{E}' \cdot d \vect{l} \tag*{Electromotive force (5.134)} \\
-		& \mathscr{E} = -k \tder{F}{t} \tag*{Faraday's Law (5.135)} \\
-		& W = \frac{1}{2} \int \vect{J \cdot A} \; d^3 x  \tag*{Energy to ramp current from zero (4.83)::(5.149)} \\
-		& W = \frac{1}{2} \int \vect{H \cdot B} \; d^3 x \tag*{Magnetic energy in fields (4.89)::(5.148)} \\
-		& \tder{W}{t} = \int \ve{H} \cdot \tder{\ve{B}}{t} \; d^3 x \tag*{Power in magetic field (5.147)} \\
-		& \Delta W = \frac{1}{2} \int_{V_1} \vect{M \cdot B}_0 \; d^3 x \tag*{Energy to place permeable object in $\ve{B}_0$ (4.93)::(5.150)} \\
-		& \tder{W}{t} = - \int \ve{J \cdot E} \; d^3 x \tag*{Change in energy due to EMF} \\
-		& W = \frac{\mu_0}{2} \int |\ve{H}|^2 \; d^3 x = \frac{\mu_0}{2} \sum_{i=1}^{N} \sum_{j=1}^{N} \int \Phi_{M_j}(\ve{x}) \rho_{M_i}(\ve{x}) \; d^3 x \tag*{$N$ ferromagnets (HW 8.2b)} \\
-		& W = \frac{1}{2} \sum_{i=1}^N L_i I_i^2 + \sum_{i=1}^N \sum_{j>i}^N M_{ij} I_i I_j \tag*{Inductive energy (5.152)} \\
-		& M_{ij} = \frac{1}{I_j} F_{ij} \tag*{Mutual inductance (5.156)} \\
+		& \mathcal{L} = \frac{1}{I^2} \int_\mathcal{C} \ve{J(x) \cdot A(x)} \; d^3 x \tag*{Neumann's formula for self-inductance (5.154)} \\
+		& W = \frac{1}{2} \int \vect{J \cdot A} \; d^3 x  = \frac{1}{2} \int \vect{H \cdot B} \; d^3 x \tag*{Energy in magnetic field (5.149,5.148)} \\
+		& W = \frac{1}{2} \sum_{i=1}^N \mathcal{L}_i I_i^2 + \sum_{i=1}^N \sum_{j>i}^N M_{ij} I_i I_j \tag*{Inductive energy (5.152)} \\
+	& \small \hspace{-10pt} \textbf{Specific Cases of Magnetostatics} \small \\
 		&\ve{A}_{\text{dip}} = \frac{\mu_0}{4 \pi} \frac{m \sin \theta}{r^2} \Rightarrow \ve{B}_{\text{dip}} = \frac{\mu_0 m}{4 \pi r^3}(2 \cos \theta \rhat + \sin \theta \thetahat) \tag*{Field of dipole (G 5.87,88)} \\
 		& \ve{B}(z) = \frac{\mu_0 I}{2} \lrb{ \frac{a^2}{(a^2 + z^2)^{3/2}} }\zhat \tag*{On-axis magnetic field of current loop (G. 5.41)} \\
-		& \ve{B} = \frac{\mu_0 N I}{L} \zhat \tag*{Magnetic field inside solenoid (5.59)} \\
-		& \ve{B} = \frac{\mu_0 N I}{2 \pi \rho} \phihat \tag*{Magnetic field inside toroidal coil (G. 5.60)} \\
-		& \ve{\nabla \cdot J} + \pder{\rho}{t} = 0 \tag*{Continuity Equation (6.3)} \\
-		& \ve{E} = -\ve{\nabla} \Phi - \pder{\ve{A}}{t} \tag*{Potentials in dynamic systems (6.9)} \\
-		& \nabla^2 \Phi - \frac{1}{c^2} \dpder{\Phi}{t} = -\rho / \eo \tag*{Inhomogenous wave equation in $\Phi$ (6.15)} \\
-		& \nabla^2 \ve{A} - \frac{1}{c^2} \dpder{\ve{A}}{t} = -\mu_0 \ve{J} \tag*{Inhomogenous wave equation in $\ve{A}$ (6.16)} \\
-		& \ve{\nabla \cdot A}' + \frac{1}{c^2} \pder{\Phi}{t} = 0 \tag*{Lorenz gauge condition (6.17)} \\
-		& u = \frac{1}{2}(\ve{E \cdot D} + \ve{B \cdot H}) \tag*{Total energy density (6.106)} \\
-		& \pder{u}{t} + \ve{\nabla \cdot S} = - \ve{J \cdot E} \tag*{Differential continuity equation (6.108)} \\
+		& \ve{B} = \frac{\mu_0 N I}{L} \zhat, \quad \ve{B} = \frac{\mu_0 N I}{2 \pi \rho} \phihat \tag*{Magnetic field inside (solenoid, toroidal coil) (G. 5.59,60)} \\
+		& \Phi_M(r,\theta) = \frac{1}{3} M_0 a^2 \frac{r_<}{r_>^2} \cos \theta \tag*{Sphere with uniform $\ve{M} = M_0 \zhat$ [$(r_<,r_>)$, $(r,a)$] (5.104)} \\
+		& \vect{M} = \frac{3}{\mu_0} \left( \frac{\mu - \mu_0}{\mu + 2 \mu_0} \right) \vect{B}_0 \tag*{Permeable sphere in uniform magnetic field $\ve{B}_0$ (5.115)} \\
+		& \mathcal{L} = \frac{\mu_0 \pi a^2 N^2}{L} \tag*{Inductance of a solenoid with N turns per unit length L (L. HW9 Pr. 2)} \\	
+	& \small \hspace{-10pt} \textbf{Electrodynamics} \small \\
+		& \ve{\nabla \cdot J} + \pder{\rho}{t} = 0, \quad \pder{u}{t} + \ve{\nabla \cdot S} = - \ve{J \cdot E} \tag*{Continuity Equations (6.3, 6.108)} \\
+		& \nabla^2 \Phi - \frac{1}{c^2} \dpder{\Phi}{t} = -\rho / \eo, \quad \nabla^2 \ve{A} - \frac{1}{c^2} \dpder{\ve{A}}{t} = -\mu_0 \ve{J} \tag*{EM wave equations (6.15,6.16)} \\
+		& \ve{\nabla \cdot A}' + \frac{1}{c^2} \pder{\Phi'}{t} = 0 \tag*{Lorenz gauge condition (6.17)} \\
+		\begin{split}
+			& \Phi(\ve{x},t) = \K \int \frac{[\rho(\ve{x}',t')]_\text{ret}}{|\ve{x} - \ve{x}'|} \; d^3 x \\
+			& \ve{A}(\ve{x},t) = \frac{\mu_0}{4 \pi} \int \frac{[\ve{J}(\ve{x}',t')]_\text{ret}}{|\ve{x} - \ve{x}'|} \; d^3 x' \\
+		\end{split} \tag*{Retarded potentials (6.48)} \\
+		& t' = t - |\ve{x} - \ve{x}'| \tag*{Retarded time (J. pg. 246)} \\
+		& r \gg c \tau \; \text{(radiation zone)}, \quad r \ll c \tau \; \text{(Static zone)} \tag*{ (G. 11.10, 11.13)} \\
+		& u = \frac{1}{2}(\ve{E \cdot D} + \ve{B \cdot H}) \tag*{Total electromagnetic energy density (6.106)} \\
 		& \ve{S} = \ve{E \times H} \tag*{Poynting vector definition (6.109)} \\
+		& \ve{F} = q(\ve{E} + \ve{v \times B}) \tag*{Lorentz force law (6.113)} \\
 		& \ve{g} = \frac{1}{c^2} (\ve{E \times H}) \tag*{Electromagnetic momentum density (6.118)} \\
-		& \ve{J} = \sigma \ve{E}, \quad V = IR \tag*{Ohm's Law (G. 7.3,4)} \\
-		& P = IV = I^2 R \tag*{Joule heating law (G. 7.7)} \\
+		& \ve{J} = \sigma \ve{E}, \quad V = IR; \qquad P = IV = I^2  \tag*{Ohm's Law, Joule Heating Law (G. 7.3, 7.4; 7.7)} \\
 		& \dpder{V}{t} = \frac{1}{\mathcal{LC}} \dpder{V}{z} = c^2 \dpder{V}{z} \tag*{Wave formulation of telegrapher's equations (L. 23)} \\
 		& V(z,t) = f(t-z/c) + g(t+z/c) \tag*{Voltage solutions to telegrapher's equations (L. 25)} \\
 		& I(z,t) = \frac{1}{Z} \lrb{f(t-z/c) - g(t+z/c)} \tag*{Current solutions to telegrapher's equations (L. 30)} \\
 		& Z = c \mathcal{L} = \sqrt{\mathcal{L}/\mathcal{C}} \tag*{Impedance definition (L. 31)} \\
 		& V(\ell,t) = R I(\ell,t) \Rightarrow g(t+\ell/c) = \frac{R-Z}{R+Z} f(t-\ell/c) \tag*{Resistive BC (L. 37,39)}\\
 		& V(z,t) = |\widetilde{A}_0| \cos\lrb{\omega(t \mp z/c) -\delta} \tag*{Sinusoidal solutions to telegrapher's equation (L. 53)} \\
-		& (a + x)^n = a^n + n a^{n-1} x + \frac{n (n-1)}{2!} a^{n-2} x^2 + ... =  \tag*{Binomial Expansion} \\
+	& \small \hspace{-10pt} \textbf{Potentially Useful Mathematical Identities} \small \\
+		& \delta(f(x)) = \sum_{i} \frac{1}{\left|\tder{f}{x}(x_i)\right|}\delta(x - x_i)	\tag*{Jackson Dirac delta function Rule 5 } \\
+		& (a + x)^n \approx a^n + n a^{n-1} x + \frac{n (n-1)}{2!} a^{n-2} x^2 + ... =  \tag*{Binomial Expansion} \\
 		& f(x) \approx f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 + ...  \tag*{Taylor Series} \\
+		& \int_{0}^{L} \sin \left( \frac{n \pi x}{L} \right)  \sin \left( \frac{m \pi x}{L} \right) dx = \frac{L}{2} \delta_{nm}  \tag*{Trig function normalization} \\
+		& \int_{0}^{2 \pi} d \phi \int_{0}^{L} dz \; e^{i(m - m') \phi} e^{i \frac{2 \pi}{L}(n -n')z} = 2 \pi L \delta_{m'm} \delta_{n'n} \tag*{Exponential normalization} \\
+		& J_m(k \rho) \propto (k \rho)^m, \; Y_m(k \rho) \propto (k \rho)^{-m}, \; I_m(k \rho) \propto (k \rho)^m, \; K_m(k \rho) \propto (k \rho)^{-m}, \tag*{As $\rho \rightarrow 0$} \\
  		&\begin{pmatrix}
 			\rhohat \\
 			\phihat \\
