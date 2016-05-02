@@ -88,7 +88,7 @@
 \pagenumbering{gobble}
 
 \pagestyle{fancy}
-\lhead{Midterm 2 Equations}
+\lhead{Final Exam Equations}
 \chead{PHSX519 Electromagnetic Theory I}
 \rhead{Roy Smart}
 
@@ -105,8 +105,8 @@
 	\begin{align*}
 		& \ve{\nabla \cdot D} = \rho, \quad \ve{\nabla \cdot B} = 0, \quad \ve{\nabla \times H} = \ve{J}+\pder{\ve{D}}{t},\quad \ve{\nabla \times E} = - \pder{\ve{B}}{t} \tag*{Maxwell's Eqns. (6.6)}\\
 	& \small \hspace{-10pt} \textbf{General Equations of Electrostatics} \small \\
-		& \ve{E} = -\ve{\nabla} \Phi - \pder{\ve{A}}{t} \tag*{Electic field in terms of potentials (6.9)} \\
-		& \Phi(\vc{x}) = \K \int \frac{\rho (\vc{x}')}{|\vc{x} - \vc{x}'|} d^3 x' \tag*{Scalar potential in terms of charge density (1.17)} \\
+		& \oint_S \vc{E} \cdot \vc{n} \; da = \frac{1}{\eo} \int_V \rho(\vc{x}) d^3x	\tag*{Gauss' Law (1.11)} \\
+		& \ve{E} = -\ve{\nabla} \Phi, \quad \Phi(\vc{x}) = \K \int \frac{\rho (\vc{x}')}{|\vc{x} - \vc{x}'|} d^3 x' \tag*{Scalar potential (1.16, 1.17)} \\
 		& \nabla^2 \Phi = -\rho/\eo	\tag*{Electrostatic Poisson Eequation (1.28)} \\
 		& V_i = \sum_{j=1}^{n} p_{ij} q_j,  \qquad Q_i = \sum_{j=1}^{n} C_{ij} V_j  \tag*{Capactiance matrices (1.61)} \\
 		& q' = -\frac{a}{r} q, \quad r' = \frac{a^2}{r}		\tag*{Magnitude and position of image charge on sphere (2.4)} \\
@@ -124,7 +124,7 @@
 		& \sigma_b = \ve{P} \cdot \nhat, \quad \rho_b = - \ve{\nabla \cdot P} \tag*{Electric bound charge density (G. 4.11)} \\
 		& \begin{cases}
 			(\vect{D}_2 - \vect{D}_1) \cdot \vect{n}_{21} = \sigma \\
-			(\vect{E}_2 - \vect{E}_1) \times \vect{n}_{21} = 0 \Rightarrow \Phi_1 = \Phi_2 \\
+			(\vect{E}_2 - \vect{E}_1) \times \vect{n}_{21} = 0 \Rightarrow \Phi_2 = \Phi_1 = V \\
 		\end{cases}	\tag*{Electric JC's (evaluate at boundary) (4.40)} \\		
 		& W = \int \rho(\vect{x}) \Phi(\vect{x})\; d^3x = \frac{1}{2} \int \vect{E} \cdot \vect{D} \; d^3x \tag*{Energy to bring charges from $\infty$ (4.83,89)} \\
 		& W = \frac{1}{2} \sum_{i=1}^{n} Q_i V_i = \frac{1}{2} \sum_{i=1}^n \sum_{j=1}^{n} C_{ij} V_i V_j	\tag*{Potential energy of capacitor system (1.62)} \\	
@@ -134,10 +134,11 @@
 			\Phi_{\text{in}} = - \left( \frac{3}{\epsilon/\eo + 2} \right) E_0 r \cos \theta \\ 
 			\Phi_{\text{out}} = - E_0 r \cos \theta + \left( \frac{\epsilon/\eo - 1}{\epsilon/\eo + 2} \right) E_0 \frac{a^3}{r^2} \cos \theta 
 		\end{cases} \tag*{Dielectric sphere in $\vect{E} = E_0 \zhat$ (4.54)} \\
-		& \Phi = -E_0 \left( r - \frac{a^3}{r^2} \right)	\tag*{Electric potential of conducting sphere in $\vect{E} = E_0 \zhat$ (2.14)} \\
+		& \Phi = -E_0 \left( r - \frac{a^3}{r^2} \right) \cos \theta	\tag*{Electric potential of conducting sphere in $\vect{E} = E_0 \zhat$ (2.14)} \\
 		& \ve{E} = \frac{\sigma}{\eo} \nhat \tag*{$\ve{E}$ of parallel-plate capacitor ($\nhat$ points from pos. to neg.) (G. Ex. 2.6)} \\
 		& \ve{E} = \frac{p}{4 \pi \eo r^3}\lrp{2 \cos \theta \rhat + \sin \theta \thetahat} \tag*{Electic dipole at origin pointing in $\zhat$ (4.12)} \\	
 	& \small \hspace{-10pt} \textbf{General Equations of Magnetostatics} \small \\
+		& \oint_C \ve{B} \; \ve{\cdot} \; d \ve{l} = \mu_0 I \tag*{Amp\`ere's law (5.25)} \\
 		& \nabla \cdot \vect{J} = 0 \tag*{Condition of magnetostatics (5.3)} \\
 		& \nabla^2 \vect{A} = -\mu_0 \vect{J}_M \tag*{Poisson equation in terms of magnetic vector potential (5.101)} \\
 		& \ve{B}(\ve{r}) = \frac{\mu_0 I}{4 \pi} \int \frac{d\ve{l}' \ve{\times} (\ve{x} - \ve{x}')}{|\ve{x} - \ve{x}'|^3} \tag*{Biot-Savart law (G. 5.34)} \\
@@ -146,7 +147,7 @@
 		& \vect{m} = IA \nhat \tag*{Magnetic moment of plane loop (5.57)} \\
 		& \ve{m} = \int \ve{M} \; d^3 x \tag*{Total magnetic moment (J. pg. 197)} \\
 		& \Phi_M(\vect{x}) = \frac{\vect{m \cdot x}}{4 \pi r^3}, \quad \vect{A}(\vect{x}) = \frac{\mu_0}{4 \pi} \frac{\vect{m} \times \vect{x}}{|\vect{x}|^3} \tag*{Magnetic potentials of a dipole (5.55)} \\
-		& \vect{B}(\vect{x}) = \frac{\mu_0}{4 \pi} \left[ \frac{3 \vect{n}(\vect{n} \cdot \vect{m}) - \vect{m}}{|\vect{x}|^3} \right]\tag*{Magnetic field of dipole (5.56)}\\
+		& \vect{B}(\vect{x}) = \frac{\mu_0}{4 \pi} \left[ \frac{3 \vect{n}(\vect{n} \cdot \vect{m}) - \vect{m}}{|\vect{x}|^3} \right]\tag*{Magnetic field of dipole ($\ve{n}$ parallel to $\ve{x}$) (5.56)}\\
 		& \ve{\tau} = \ve{m \times B}, \quad \vect{F} = \vect{\nabla(m \cdot B)} \tag*{Torque and force on magnetic dipole (5.1, 5.69)} \\
 		& \vect{H} = -\vect{\nabla} \Phi_M \tag*{Magnetic scalar potential (valid if $\ve{J}_f = 0$) (5.93)} \\
 		& \vect{H} = \frac{1}{\mu_0} \vect{B - M} \tag*{Definition of $\ve{H}$ (5.81)} \\
@@ -158,7 +159,7 @@
 		& \vect{J}_M = \vect{\nabla \times M}, \quad \vect{K}_b = \vect{M \times n}  \tag*{Bound current density (G. 6.13,14)} \\
 		& \rho_M = - \vect{\nabla \cdot M}, \quad \sigma_M = \vect{n \cdot M} \tag*{Effective magnetic charge density (5.96,99)} \\
 		& F = \int_S \vect{B \cdot n} \; da = \oint \ve{A} \cdot d \ve{l} \tag*{Magnetic flux (5.133)} \\
-		& \mathscr{E} = -\tder{F}{t} = \oint \ve{E} \cdot d\ve{l} = -\int \pder{\ve{B}}{t} \tag*{EMF due to Faraday's Law (5.135)} \\
+		& \mathscr{E} = -\tder{F}{t} = \oint \ve{E} \cdot d\ve{l} = -\int \pder{\ve{B}}{t} \cdot d \ve{a} \tag*{EMF due to Faraday's Law (5.135)} \\
 		& M_{ij} = \frac{1}{I_j} F_{ij} \tag*{Mutual inductance (5.156)} \\
 	\end{align*}
 	\setlength{\abovedisplayskip}{-25pt}
@@ -177,32 +178,35 @@
 		& \vect{M} = \frac{3}{\mu_0} \left( \frac{\mu - \mu_0}{\mu + 2 \mu_0} \right) \vect{B}_0 \tag*{Permeable sphere in uniform magnetic field $\ve{B}_0$ (5.115)} \\
 		& \mathcal{L} = \frac{\mu_0 \pi a^2 N^2}{L} \tag*{Inductance of a solenoid with N turns per unit length L (L. HW9 Pr. 2)} \\	
 	& \small \hspace{-10pt} \textbf{Electrodynamics} \small \\
+		& \ve{E} = -\ve{\nabla} \Phi - \pder{\ve{A}}{t}, \quad \ve{\nabla \cdot A}' + \frac{1}{c^2} \pder{\Phi'}{t} = 0 \tag*{Lorenz gauge (6.9, 6.17)} \\
 		& \ve{\nabla \cdot J} + \pder{\rho}{t} = 0, \quad \pder{u}{t} + \ve{\nabla \cdot S} = - \ve{J \cdot E} \tag*{Continuity Equations (6.3, 6.108)} \\
 		& \nabla^2 \Phi - \frac{1}{c^2} \dpder{\Phi}{t} = -\rho / \eo, \quad \nabla^2 \ve{A} - \frac{1}{c^2} \dpder{\ve{A}}{t} = -\mu_0 \ve{J} \tag*{EM wave equations (6.15,6.16)} \\
-		& \ve{\nabla \cdot A}' + \frac{1}{c^2} \pder{\Phi'}{t} = 0 \tag*{Lorenz gauge condition (6.17)} \\
 		\begin{split}
 			& \Phi(\ve{x},t) = \K \int \frac{[\rho(\ve{x}',t')]_\text{ret}}{|\ve{x} - \ve{x}'|} \; d^3 x \\
 			& \ve{A}(\ve{x},t) = \frac{\mu_0}{4 \pi} \int \frac{[\ve{J}(\ve{x}',t')]_\text{ret}}{|\ve{x} - \ve{x}'|} \; d^3 x' \\
-		\end{split} \tag*{Retarded potentials (6.48)} \\
-		& t' = t - |\ve{x} - \ve{x}'| \tag*{Retarded time (J. pg. 246)} \\
+		\end{split} \tag*{Retarded potentials where $t' = t - |\ve{x} - \ve{x}'| / c$ (6.48)} \\
 		& r \gg c \tau \; \text{(radiation zone)}, \quad r \ll c \tau \; \text{(Static zone)} \tag*{ (G. 11.10, 11.13)} \\
 		& u = \frac{1}{2}(\ve{E \cdot D} + \ve{B \cdot H}) \tag*{Total electromagnetic energy density (6.106)} \\
 		& \ve{S} = \ve{E \times H} \tag*{Poynting vector definition (6.109)} \\
 		& \ve{F} = q(\ve{E} + \ve{v \times B}) \tag*{Lorentz force law (6.113)} \\
 		& \ve{g} = \frac{1}{c^2} (\ve{E \times H}) \tag*{Electromagnetic momentum density (6.118)} \\
-		& \ve{J} = \sigma \ve{E}, \quad V = IR; \qquad P = IV = I^2  \tag*{Ohm's Law, Joule Heating Law (G. 7.3, 7.4; 7.7)} \\
-		& \dpder{V}{t} = \frac{1}{\mathcal{LC}} \dpder{V}{z} = c^2 \dpder{V}{z} \tag*{Wave formulation of telegrapher's equations (L. 23)} \\
-		& V(z,t) = f(t-z/c) + g(t+z/c) \tag*{Voltage solutions to telegrapher's equations (L. 25)} \\
-		& I(z,t) = \frac{1}{Z} \lrb{f(t-z/c) - g(t+z/c)} \tag*{Current solutions to telegrapher's equations (L. 30)} \\
-		& Z = c \mathcal{L} = \sqrt{\mathcal{L}/\mathcal{C}} \tag*{Impedance definition (L. 31)} \\
+		& \ve{J} = \sigma \ve{E}, \quad V = IR; \qquad P = IV = I^2 R \tag*{Ohm's Law, Joule Heating Law (G. 7.3, 7.4; 7.7)} \\
+		& R = \rho \ell / A, \quad \sigma = 1 / \rho	\tag*{Pouillet's Law ($\ell$ is length, $A$ is cross-sectional area) (Wikipedia)}\\
+	& \small \hspace{-10pt} \textbf{Telegrapher's Equations} \small \\
+		& \begin{drcases}
+			\pder{I}{t} = -\frac{1}{\mathcal{L}} \pder{V}{z} \\
+			\pder{V}{t} = - \frac{1}{\mathcal{C}} \pder{I}{z}\\
+		\end{drcases} \Rightarrow \dpder{V}{t} = \frac{1}{\mathcal{LC}} \dpder{V}{z} = c^2 \dpder{V}{z} \tag*{Telegrapher's equations (L. 21, 22, 23)} \\
+		& \mathcal{C} = \frac{2 \pi \epsilon}{\ln(b/a)}, \quad \mathcal{L} = \frac{\mu}{2 \pi} \ln(b/a) \tag*{Capacitance and inductance of coaxial cable (L. 17, 19)} \\
+		& V(z,t) = f(t-z/c) + g(t+z/c), \; I(z,t) = \frac{1}{Z} \lrb{f(t-z/c) - g(t+z/c)} \tag*{(L. 25, 30)} \\
+		& Z = c \mathcal{L} = \sqrt{\mathcal{L}/\mathcal{C}}, \quad k = \pm \omega/c \tag*{Impedance definiton, wave vector value (L. 31)} \\
 		& V(\ell,t) = R I(\ell,t) \Rightarrow g(t+\ell/c) = \frac{R-Z}{R+Z} f(t-\ell/c) \tag*{Resistive BC (L. 37,39)}\\
+		& V(z,t) = \Re[\widetilde{A}(z) e^{-i \omega t}] \Rightarrow \dtder{\widetilde{A}}{z} = -(w/c)^2 \widetilde{A} \Rightarrow \widetilde{A}(z) = \widetilde{A}_0 e^{ikz} \tag*{(L. 48, 49, 50)} \\
 		& V(z,t) = |\widetilde{A}_0| \cos\lrb{\omega(t \mp z/c) -\delta} \tag*{Sinusoidal solutions to telegrapher's equation (L. 53)} \\
+		& V(z,t) = \frac{V_0}{\sin(\omega \ell / c)} \cos (\omega t) \sin[\omega(\ell - z)/c] \tag*{Short circuit, $V(0,t) = V_0 \cos (\omega t)$ (L. 62)}\\
 	& \small \hspace{-10pt} \textbf{Potentially Useful Mathematical Identities} \small \\
 		& \delta(f(x)) = \sum_{i} \frac{1}{\left|\tder{f}{x}(x_i)\right|}\delta(x - x_i)	\tag*{Jackson Dirac delta function Rule 5 } \\
-		& (a + x)^n \approx a^n + n a^{n-1} x + \frac{n (n-1)}{2!} a^{n-2} x^2 + ... =  \tag*{Binomial Expansion} \\
-		& f(x) \approx f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 + ...  \tag*{Taylor Series} \\
-		& \int_{0}^{L} \sin \left( \frac{n \pi x}{L} \right)  \sin \left( \frac{m \pi x}{L} \right) dx = \frac{L}{2} \delta_{nm}  \tag*{Trig function normalization} \\
-		& \int_{0}^{2 \pi} d \phi \int_{0}^{L} dz \; e^{i(m - m') \phi} e^{i \frac{2 \pi}{L}(n -n')z} = 2 \pi L \delta_{m'm} \delta_{n'n} \tag*{Exponential normalization} \\
+		& (a + x)^n \approx a^n + n a^{n-1} x+..., \quad f(x) \approx f(a) + \frac{f'(a)}{1!}(x-a)+... \tag*{Taylor Expansions} \\
 		& J_m(k \rho) \propto (k \rho)^m, \; Y_m(k \rho) \propto (k \rho)^{-m}, \; I_m(k \rho) \propto (k \rho)^m, \; K_m(k \rho) \propto (k \rho)^{-m}, \tag*{As $\rho \rightarrow 0$} \\
  		&\begin{pmatrix}
 			\rhohat \\
